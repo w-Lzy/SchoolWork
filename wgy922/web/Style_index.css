@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/Ithea.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin: 0;
+}
+
+@keyframes header {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.header {
+    animation-name: header;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    opacity: 0;
+    transform: translateY(30px);
+    background: transparent;
+    padding: 50px;
+    text-align: center;
+    color: black;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.header p {
+    font-size: 25px;
+}
+
+@keyframes button-container {
+    from { 
+        opacity: 0; transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; transform: translateY(0); 
+    }
+}
+
+.button-container {
+    display:flex;
+    justify-content: center;
+    margin:50px;
+    flex-wrap:wrap;
+}
+
+.button-container button{
+    width:175px;
+    height:75px;
+    margin: 0 35px; 
+    padding: 10px 20px; 
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    background-color: orange; 
+    color: black;
+    font-weight: bold;
+    border-radius: 36px;
+    transition: background-color 0.3s;
+    position: relative;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    animation-name: button-container;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.button-container button:hover {
+    background-color: skyblue;
+}
+
+.footer {
+    padding: 0px;
+    text-align: right;
+    background: transparent;
+    position: translate;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+
+@media screen and (max-width: 700px) {
+    .header {   
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .button-container a {
+        float: none;
+        width: 100%;
+    }
+}
